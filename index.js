@@ -1,6 +1,6 @@
-function takeANumber (katzDeliLine, custName) {
-  katzDeliLine.push(custName);
-  return `Welcome, ${custName}. You are number ${katzDeliLine.length} in line.`;
+function takeANumber (katzDeliLine) {
+  katzDeliLine.push(katzDeliLine);
+  return `You are number ${katzDeliLine.length} in line.`;
 }
 
 function nowServing(katzDeliLine) {
@@ -15,7 +15,7 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine.length >= 1) {
     let list = [];
     for (let i = 0; i < katzDeliLine.length; i++) {
-      list.push(`${ i + 1}. ${ katzDeliLine[i]}`);
+      list.push(`${i + 1}. ${katzDeliLine[i]}`);
     } 
     return 'The line is currently: ' + list.join(', ');
   } else {
